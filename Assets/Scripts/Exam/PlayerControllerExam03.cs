@@ -40,17 +40,20 @@ public class PlayerControllerExam03 : MonoBehaviour
 
         if (shootAction.triggered)
         {
-            Instantiate(projectilePrefab, transform.position, transform.rotation);
+            //Instantiate(projectilePrefab, transform.position, transform.rotation);
+            enableAutoFireMode = !enableAutoFireMode;
         }
 
+        
+
         if (enableAutoFireMode)
-            {
+        {
                 
-                if(fireTimer >= autoFireInterval)
-                {
-                    Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
-                    fireTimer-= autoFireInterval;
-                }
+            if(fireTimer >= autoFireInterval)
+            {
+                Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+                fireTimer-= autoFireInterval;
+            }
                 
                 
         }
