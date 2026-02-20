@@ -53,7 +53,7 @@ public class PlayerControllerExam03 : MonoBehaviour
                 }
                 
                 
-            }
+        }
             
         
 
